@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        {% include "dashboard/header.html" %}
+    </head>
+
+    <body>
+        <header>
+
+        </header>
+
+        <div>
+            <h3>Welcome to Optimum IT Support.</h3>
+            <p>You're one click away from your technical solution!</p>
+            <a href= {% url "signup" %}> Sign Up</a>
+            {% comment %} <a href= {% url "login" %}>Login</a> {% endcomment %}
+        </div>
+
+        <footer>
+        {% include "dashboard/footer.html" %}
+        </footer>
+    </body>
+</html>

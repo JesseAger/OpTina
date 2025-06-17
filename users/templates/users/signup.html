@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+<style>
+body{
+    font-familiy:sans-serif;
+}
+</style>
+    </head>
+
+    <body>
+        <header>{% include "dashboard/header.html" %}</header>
+
+        <div class="signup" id="signup">
+            <h1>Sign Up</h1>
+            <form action="users.models" method="post">
+                 {% csrf_token %}
+                 {% comment %} {{ form.as_p }} {% endcomment %}
+                 <form method="post">
+                    {{ form.firstname.label_tag }} {{ form.firstname }} <br> <br>
+                    {{ form.lastname.label_tag }} {{ form.lastname }}<br> <br>
+                    {{ form.email.label_tag }} {{ form.email }}<br> <br>
+                    {{ form.username.label_tag }} {{ form.username }} <br> <br>
+                    {{ form.password1.label_tag }} {{ form.password1 }} <br> <br>
+                    {{ form.password2.label_tag }} {{ form.password2 }} <br> <br>
+                <select name="role" id="role">
+                    <option value="staff">Staff</option>
+                    <option value="admin">System Admin</option>
+                    <option value="support">IT Support</option>
+                </select><br>
+            
+            <br><br>
+                  <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </body>
+
+</html>
