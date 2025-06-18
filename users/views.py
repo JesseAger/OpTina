@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .forms import CustomUserCreationForm, AuthenticationForm
+from .forms import CustomUserCreationForm
 from django.contrib.auth import login
+from django.contrib.auth.forms import AuthenticationForm
 
 # def user(request):
 #     context={}

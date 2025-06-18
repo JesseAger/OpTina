@@ -12,8 +12,8 @@
             <form action="" method="post">
                  {% csrf_token %}
                  {% comment %} {{ form.as_p }} {% endcomment %}
-                    {{ form.firstname.label_tag }} {{ form.firstname }} <br> <br>
-                    {{ form.lastname.label_tag }} {{ form.lastname }}<br> <br>
+                    {{ form.firs_tname.label_tag }} {{ form.first_name }} <br> <br>
+                    {{ form.last_name.label_tag }} {{ form.last_name }}<br> <br>
                     {{ form.email.label_tag }} {{ form.email }}<br> <br>
                     {{ form.username.label_tag }} {{ form.username }} <br> <br>
                      {{ form.role.label_tag }} {{ form.role }} <br><br>

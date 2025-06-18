@@ -1,11 +1,11 @@
 from django.db import models
-from users.models import user
+from users.models import CustomUser
 from tickets.models import tickets
 
 
 
 class notifications(models.Model):
-    staff = models.ForeignKey(user, on_delete=models.CASCADE)
+    staff = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     ticket = models.ForeignKey(tickets, on_delete=models.CASCADE)
     message = models.CharField(max_length=255)
     is_read = models.BooleanField(default=False)
