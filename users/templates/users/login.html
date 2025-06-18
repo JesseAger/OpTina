@@ -1,0 +1,14 @@
+<header id="header">
+    {% include "dashboard/header.html" %}
+
+</header>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+
+<footer id="footer">
+    {% include "dashboard/footer.html" %}
+</footer>
