@@ -12,10 +12,11 @@ def signup_view(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            # login(request, user) Automatically log the user in
-            return redirect('login')  # Replace 'home' with your home page URL name
+            return redirect('login')  
     else:
         form = CustomUserCreationForm()
     return render(request, 'users/signup.html', {'form': form})
 
 # def login_view(request):
+
+#     login(request, user) 
