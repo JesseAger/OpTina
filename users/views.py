@@ -17,6 +17,9 @@ def signup_view(request):
         form = CustomUserCreationForm()
     return render(request, 'users/signup.html', {'form': form})
 
-# def login_view(request):
+def login_view(request):
+    user = user
+    login(request, user) 
+    context ={}
+    return render(request, 'dashboard/dashboard.html', context)
 
-#     login(request, user) 
