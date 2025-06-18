@@ -5,7 +5,7 @@ from django.conf import settings
 
 
 class notifications(models.Model):
-    staff = models.ForeignKey(settings.AUTH_USER_MODELS, on_delete=models.CASCADE)
+    staff = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     ticket = models.ForeignKey(tickets, on_delete=models.CASCADE)
     message = models.CharField(max_length=255)
     is_read = models.BooleanField(default=False)

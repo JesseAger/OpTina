@@ -20,7 +20,7 @@ class tickets(models.Model):
 
 class TicketComment(models.Model):
     ticket = models.ForeignKey(tickets, on_delete=models.SET_NULL, blank=True, null= True, related_name='comment')
-    author = models. ForeignKey(settings.AUTH_USER_MODELS, on_delete=models.CASCADE)
+    author = models. ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     comment = models.TextField()
     timestamp =  models.DateTimeField(auto_now_add=True)
     
